@@ -14,6 +14,10 @@ argc=${#@}
 flag_run=0
 flag_noconfirm=0
 
+! [ -f "$PWD/Class" ] &&
+    echo "Making Class folder" &&
+    mkdir Class
+
 for (( i = 0; i < $argc; i++ )); do 
 case "${argv[$i]}" in
     "-r"|"--run")
