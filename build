@@ -2,6 +2,7 @@
 
 # Run with `sh build`
 # Run result automatically with `sh build -r`
+# Otherwise just do `java -classpath Class Main`
 
 runcmd="java -classpath Class Main"
 compcmd="javac -d Class `find Source -type f -name \"*.java\"`"
