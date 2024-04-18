@@ -1,5 +1,8 @@
 #!/bin/sh
 
+# Run with `sh build`
+# Run result automatically with `sh build -r`
+
 runcmd="java -classpath Class Main"
 compcmd="javac -d Class `find Source -type f -name \"*.java\"`"
 
@@ -36,6 +39,6 @@ echo "Compile Command: $compcmd"
 [ $flag_run ] &&
 echo "    Run Command: $runcmd"
 
-[ $flag_noconfirm ] &&
+# [ $flag_noconfirm ] &&
     $compcmd &&
     $runcmd
